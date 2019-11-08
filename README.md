@@ -6,7 +6,7 @@ Strona zakodowana na podstawie dostarczonych materiałów graficznych i [rzutu c
 
 ## Użyte technologie
 
-HTML5 i CSS3 (bez Flexboxa i Grida) + Bootstrap 4, z użyciem preprocesora Sass.
+HTML5 i CSS3 (bez Flexboxa i Grida) + Bootstrap 4, z użyciem preprocesora Sass oraz JavaScript (biblioteka jQuery)
 
 ## Uruchomienie strony lokalnie z podglądem zmian na żywo (dla developerów korzystających z Node.js)
 
