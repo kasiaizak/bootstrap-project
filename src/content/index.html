@@ -1,9 +1,11 @@
-<!doctype html>
-<html lang="pl">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootstrap project</title>
-  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Montserrat:400,700|Roboto+Slab&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -11,7 +13,7 @@
 </head>
 
 <body class="bootstrap-project">
-  <nav id="main-nav" class="navbar navbar-expand-lg navbar-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar--js">
     <a class="navbar-brand" href="#">Bootstrap Project</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,212 +39,206 @@
     </div>
   </nav>
 
-  <header id="main-header">
-    <div class="text-center">
-      <h2>Num libero tempore</h2>
-      <h1 class="text-uppercase">Lorem Ipsum Dolor</h1>
-      <button class="btn btn-info text-uppercase" data-scrollto="#services">View more</button>
-    </div>
+  <header class="header">
+    <section class="text-center">
+      <h2 class="header__description">Num libero tempore</h2>
+      <h1 class="header__title text-uppercase">Lorem Ipsum Dolor</h1>
+      <button class="header__button btn btn-info text-uppercase" data-scrollto="#services">View more</button>
+    </section>
   </header>
 
-  <section>
-    <div class="container text-center" id="services">
-      <div class="header-title text-uppercase">
-        <h3>Services</h3>
-      </div>
-      <div class="header-caption">Lorem ipsum dolor sit amet.</div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="service-item circle text-center">
-            <div class="vertical-center"><i class="fas fa-suitcase fa-4x"></i></div>
+  <main>
+    <section class="services container text-center" id="services">
+      <h3 class="services__title text-uppercase">Services</h3>
+      <p class="services__caption">Lorem ipsum dolor sit amet.</p>
+      <div class="services__content row">
+        <section class="services__content-item col-md-4 col-sm-6">
+          <div class="services__content-icon text-center">
+            <div class="services__content-icon-inner">
+              <i class="fas fa-suitcase fa-4x"></i>
+            </div>
           </div>
-          <div class="description">
-            <h4>Web Developmnet</h4>
+          <div class="services__content-description">
+            <h4 class="services__content-header">Web Developmnet</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa libero ratione accusantium facere hic fuga, dolore!</p>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="service-item circle text-center">
-            <div class="vertical-center"><i class="fas fa-cloud-download-alt fa-4x"></i></div>
+        </section>
+        <section class="services__content-item col-md-4 col-sm-6">
+          <div class="services__content-icon text-center">
+            <div class="services__content-icon-inner"><i class="fas fa-cloud-download-alt fa-4x"></i></div>
           </div>
-          <div class="description">
-            <h4>E-Commerce</h4>
+          <div class="services__content-description">
+            <h4 class="services__content-header">E-Commerce</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eius ipsam, ipsa ex minus tempora a.</p>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="service-item circle text-center">
-            <div class="vertical-center"><i class="fas fa-comment fa-4x"></i></div>
+        </section>
+        <section class="services__content-item col-md-4 col-sm-6">
+          <div class="services__content-icon text-center">
+            <div class="services__content-icon-inner"><i class="fas fa-comment fa-4x"></i></div>
           </div>
-          <div class="description">
-            <h4>Web Design</h4>
+          <div class="services__content-description">
+            <h4 class="services__content-header">Web Design</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate maiores numquam reiciendis, illo, sequi aut commodi!</p>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </section>
 
-    <div id="portfolio-background">
-      <div class="container text-center" id="portfolio">
-        <div class="header-title text-uppercase">
-          <h3>Portfolio</h3>
-        </div>
-        <div class="header-caption">Lorem ipsum dolor sit amet.</div>
-        <div class="row portfolio-items">
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-1">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio__content container text-center" >
+        <h3 class="portfolio__title text-uppercase">Portfolio</h3>
+        <p class="portfolio__caption">Lorem ipsum dolor sit amet.</p>
+        <div class="row portfolio__content">
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--1">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-2">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+          </section>
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--2">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-3">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+          </section>
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--3">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-4">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+          </section>
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--4">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-5">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+          </section>
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--5">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <div class="portfolio-box">
-              <div class="portfolio-item" id="portfolio-item-6">
-                <div class="portfolio-item-mask">
-                  <div class="portfolio-item-mask-content">
+          </section>
+          <section class="col-lg-4 col-sm-6">
+            <div class="portfolio__content-box">
+              <div class="portfolio__content-item portfolio__content-item--6">
+                <div class="portfolio__content-mask">
+                  <div class="portfolio__content-inner">
                     <i class="fas fa-plus fa-2x"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description">
-              <h4>opis zdjęcia</h4>
+            <div class="portfolio__content-description">
+              <h4 class="portfolio__content-header">opis zdjęcia</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container text-center" id="team">
-      <div class="header-title text-uppercase">
-        <h3>Meet our team</h3>
-      </div>
-      <div class="header-caption">Lorem ipsum dolor sit.</div>
-      <div class="row team-items">
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="team-box horizontal-center">
-            <div class="team-item circle horizontal-center" id="team-item-1"></div>
+    <section class="team container text-center" id="team">
+      <h3 class="team__title text-uppercase">Meet our team</h3>
+      <p class="team__caption">Lorem ipsum dolor sit.</p>
+      <div class="team__content row">
+        <section class="team__content-item col-md-4 col-sm-6">
+          <div class="team__content-box">
+            <div class="team__content-photo team__content-photo--1"></div>
           </div>
-          <div class="description">
-            <h4>Eric Stern</h4>
+          <div class="team__content-description">
+            <h4 class="team__content-header">Eric Stern</h4>
             <p>Account Manager</p>
-            <ul class="horizontal-center">
-              <li class="social-item circle"><i class="fab fa-facebook-f fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-twitter fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-linkedin-in fa-1x"></i></li>
+            <ul class="team__content-social">
+              <li class="team__content-service"><i class="fab fa-facebook-f fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-twitter fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-linkedin-in fa-1x"></i></li>
             </ul>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="team-box horizontal-center">
-            <div class="team-item circle horizontal-center" id="team-item-2"></div>
+        </section>
+        <section class="team__content-item col-md-4 col-sm-6">
+          <div class="team__content-box">
+            <div class="team__content-photo team__content-photo--2"></div>
           </div>
-          <div class="description">
-            <h4>Martin Muller</h4>
+          <div class="team__content-description">
+            <h4 class="team__content-header">Martin Muller</h4>
             <p>Developer</p>
-            <ul class="horizontal-center">
-              <li class="social-item circle"><i class="fab fa-facebook-f fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-twitter fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-linkedin-in fa-1x"></i></li>
+            <ul class="team__content-social">
+              <li class="team__content-service"><i class="fab fa-facebook-f fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-twitter fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-linkedin-in fa-1x"></i></li>
             </ul>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6 horizontal-center">
-          <div class="team-box horizontal-center">
-            <div class="team-item circle horizontal-center" id="team-item-3"></div>
+        </section>
+        <section class="team__content-item col-md-4 col-sm-6">
+          <div class="team__content-box">
+            <div class="team__content-photo team__content-photo--3"></div>
           </div>
-          <div class="description">
-            <h4>Anna Smith</h4>
+          <div class="team__content-description">
+            <h4 class="team__content-header">Anna Smith</h4>
             <p>Project Manager</p>
-            <ul class="horizontal-center">
-              <li class="social-item circle"><i class="fab fa-facebook-f fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-twitter fa-1x"></i></li>
-              <li class="social-item circle"><i class="fab fa-linkedin-in fa-1x"></i></li>
+            <ul class="team__content-social">
+              <li class="team__content-service"><i class="fab fa-facebook-f fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-twitter fa-1x"></i></li>
+              <li class="team__content-service"><i class="fab fa-linkedin-in fa-1x"></i></li>
             </ul>
           </div>
-        </div>
+        </section>
       </div>
-      <div class="caption text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis magnam a doloremque facere ex voluptatem obcaecati mollitia nobis, soluta veritatis repellendus modi neque distinctio facilis voluptates voluptate vel. Incidunt, reiciendis.</div>
-    </div>
+      <div class="team__caption text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis magnam a doloremque facere ex voluptatem obcaecati mollitia nobis, soluta veritatis repellendus modi neque distinctio facilis voluptates voluptate vel. Incidunt, reiciendis.</div>
+    </section>
 
-    <div id="contact">
-      <div class="contact-mask">
-        <div class="container text-center contact-content">
-          <div class="header-title text-uppercase">
-            <h3>Contact us</h3>
-          </div>
-          <div class="header-caption text-center">Lorem ipsum dolor sit.</div>
-          <form>
+    <section class="contact" id="contact">
+      <div class="contact__mask">
+        <section class="contact__content container text-center">
+          <h3 class="contact__title text-uppercase">Contact us</h3>
+          <p class="contact__caption text-center">Lorem ipsum dolor sit.</p>
+          <form class="contact__form">
             <div class="row">
               <div class="col-sm-6">
                 <input type="text" name="name" placeholder="Your name *"><br>
@@ -250,30 +246,30 @@
                 <input type="tel" name="phone" placeholder="Your Phone *"><br>
               </div>
               <div class="col-sm-6">
-                <textarea name="message" placeholder="Your message *" maxlenght="500"></textarea>
+                <textarea name="message" placeholder="Your message *" maxlength="500"></textarea>
               </div>
             </div>
             <div class="row">
               <input type="submit" value="Send Message"></input>
             </div>
           </form>
-        </div>
+        </section>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container text-center">
       <div class="row">
-        <div class="col-sm-4 text">Copyright &copy;Your Website</div>
-        <div class="col-sm-4">
-          <ul class="horizontal-center">
-            <li class="social-item circle"><i class="fab fa-facebook-f fa-1x"></i></li>
-            <li class="social-item circle"><i class="fab fa-twitter fa-1x"></i></li>
-            <li class="social-item circle"><i class="fab fa-linkedin-in fa-1x"></i></li>
+        <div class="footer__content-item col-sm-4 text">Copyright &copy;Your Website</div>
+        <div class="footer__content-item col-sm-4">
+          <ul class="footer__content-social">
+            <li class="footer__content-service"><i class="fab fa-facebook-f fa-1x"></i></li>
+            <li class="footer__content-service"><i class="fab fa-twitter fa-1x"></i></li>
+            <li class="footer__content-service"><i class="fab fa-linkedin-in fa-1x"></i></li>
           </ul>
         </div>
-        <div class="col-sm-4 text"><a href="">Privacy&nbsp;Policy</a> <a href="">Terms&nbsp;of&nbsp;Use</a></div>
+        <div class="footer__content-item col-sm-4 text"><a href="" class="footer__link">Privacy&nbsp;Policy</a> <a href="" class="footer__link">Terms&nbsp;of&nbsp;Use</a></div>
       </div>
     </div>
   </footer>

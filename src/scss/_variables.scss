@@ -1,2 +1,44 @@
-$violet: #2D2241;
-$yellow: #F9C802;
+$black: #333;
+$aqua: #0ed8d6;
+$white: #fff;
+
+@mixin section-title {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+@mixin section-caption {
+  font-family: 'Droid Serif', sans-serif;
+  font-size: 0.8rem;
+  padding-bottom: 60px;
+}
+@mixin spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@mixin horizontal-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+@mixin circle {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 50%;
+}
+@mixin item-description {
+  font-family: 'Droid Serif', sans-serif;
+  font-size: 0.8rem;
+}
+@mixin item-header {
+  color: $black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}

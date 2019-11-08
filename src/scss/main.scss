@@ -1,11 +1,279 @@
 @import "_normalize";
+@import "_variables";
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+/* start general */
+body,
+#team .item__description p {
+  font-family: 'Roboto Slab', serif;
+  color: #777;
 }
 
-@import "bootstrap-project";
+
+.bootstrap-project .navbar {
+  &-brand, &-brand:focus, &-brand:hover, &-toggler {
+    color: $white;
+  }
+
+  &-toggler, &-toggler-icon {
+    background-color: $white;
+  }
+
+  .navbar-nav {
+    @include section-title;
+    .nav-link {
+      color: $white;
+      font-size: 0.8rem;
+      font-weight: 400;
+      & :focus, &:hover {
+        color: $aqua;
+      }
+    }
+  }
+}
+
+
+.header {
+  background-image: url(../assets/img/header/grey.png), url(../assets/img/header/pictures_on_the_wall.jpg);
+  background-position: top center;
+  background-repeat: repeat no-repeat;
+  background-size: cover;
+  color: $white;
+  height: 100vh;
+  padding: 25vh;
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  &__description {
+    font-family: 'Droid Serif', sans-serif;
+    font-size: 1.5rem;
+  }
+  &__button {
+    margin-top: 1.5rem;
+  }
+}
+
+
+.services {
+  @include spacing;
+  &__title {
+    color: $black;
+    @include section-title;
+  }
+  &__caption { @include section-caption }
+  &__content {
+    &-item { @include horizontal-center }
+    &-icon {
+      background-color: $aqua;
+      border-color: $aqua;
+      color: $white;
+      display: inline-table;
+      height: 120px;
+      position: relative;
+      transition: all 1s ease-in-out;
+      width: 120px;
+      @include circle;
+      &:hover { transform: rotate(360deg); }
+      &-inner { @include vertical-center }
+    }
+    &-description { @include item-description }
+    &-header {
+      @include item-header;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.portfolio {
+  background-color: #f7f7f7;
+  @include spacing;
+  &__title {
+    color: $black;
+    @include section-title;
+  }
+  &__caption { @include section-caption }
+  &__content {
+    &-box {
+      height: 300px;
+      overflow: hidden;
+      width: 100%;
+    }
+    &-item {
+      background-position: center;
+      background-size: cover;
+      display: inline-block;
+      height: 300px;
+      width: 100%;
+      &--1 { background-image: url("../assets/img/portfolio/chestnut_on_bracket.jpg"); }
+      &--2 { background-image: url("../assets/img/portfolio/typing_on_laptop.jpg"); }
+      &--3 { background-image: url("../assets/img/portfolio/child_with_blue_paint.jpg"); }
+      &--4 { background-image: url("../assets/img/portfolio/chaotic_paint.jpg"); }
+      &--5 { background-image: url("../assets/img/portfolio/house_with_blue_doors.jpg"); }
+      &--6 { background-image: url("../assets/img/portfolio/box_of_cookies.jpg"); }
+      &--1, &--2, &--3, &--4, &--5, &--6 {
+        transition: transform 2s;
+        &:hover { transform: scale(1.5); }
+      }
+    }
+    &-mask {
+      background-color: rgba(14, 216, 214, 0.6);
+      color: $white;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &-inner { padding-top: 130px; }
+    &-description {
+      background-color: $white;
+      margin-bottom: 30px;
+      padding: 30px 30px 30px 30px;
+      line-height: 1.2rem;
+      @include item-description
+    }
+    &-header { @include item-header }
+  }
+}
+
+
+.team {
+  @include spacing;
+  &__title {
+    color: $black;
+    @include section-title;
+  }
+  &__caption {
+    padding-top: 20px;
+    @include section-caption;
+  }
+  &__content {
+    &-item { @include horizontal-center }
+    &-box {
+      height: 200px;
+      overflow: hidden;
+      width: 200px;
+      @include horizontal-center;
+    }
+    &-photo {
+      background-position: center;
+      background-size: cover;
+      border-color: $white;
+      display: inline-block;
+      height: 200px;
+      width: 200px;
+      @include circle;
+      @include horizontal-center;
+      &--1 { background-image: url("../assets/img/team/man-1.jpg"); }
+      &--2 { background-image: url("../assets/img/team/man-2.jpg"); }
+      &--3 { background-image: url("../assets/img/team/woman-1.jpg"); }
+    }
+    &-description { @include item-description }
+    &-header {
+      margin-top: 10px;
+      @include item-header;
+    }
+    &-social {
+      margin: 0;
+      padding: 0;
+      @include horizontal-center;
+    }
+    &-service {
+      background-color: $black;
+      border-color: $black;
+      color: $white;
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      @include circle;
+      &:hover {
+        background-color: $aqua;
+        border-color: $aqua;
+        color: $white;
+      }
+      i { transform: translateY(+50%); }
+    }
+  }
+}
+
+
+.contact {
+  background-image: url("../assets/img/contact/world-map.jpg");
+  background-size: cover;
+  &__mask {
+    background-color: rgba(0, 0, 0, 0.6);
+    @include spacing;
+  }
+  &__content { color: $white; }
+  &__title {
+    @include section-title;
+    color: $white;
+  }
+  &__caption { @include section-caption }
+  &__form  {
+    @include section-title;
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      border: 0;
+      border-radius: 5px 5px;
+      font-size: 0.7rem;
+      margin: 10px 0 10px 0;
+      padding: 20px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    textarea { height: 91.5%; }
+
+    input[type="submit"] {
+      background-color: $aqua;
+      border: 0;
+      border-radius: 5px 5px;
+      color: $white;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      padding: 20px 40px 20px 40px;
+      text-transform: uppercase;
+      @include horizontal-center;
+    }
+  }
+}
+
+.footer {
+  padding: 20px 0 20px 0;
+  @include section-title;
+  &__content {
+    font-size: 0.7rem;
+    &-item {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &-social {
+      margin: 0;
+      padding: 0;
+      @include horizontal-center;
+    }
+    &-service {
+      display: inline-block;
+      height: 40px;
+      margin-left: 4px;
+      margin-right: 4px;
+      width: 40px;
+      @include circle;
+      i { transform: translateY(+30%); }
+    }
+  }
+  &__link {
+    color: #777;
+    padding-right: 5px;
+    padding-left: 5px;
+    &:hover { color: $aqua; }
+  }
+}
