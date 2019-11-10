@@ -309,11 +309,14 @@ template {
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  scroll-behavior: smooth; }
 
-/* start general */
-body,
-#team .item__description p {
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
   font-family: 'Roboto Slab', serif;
   color: #777; }
 
@@ -520,6 +523,9 @@ body,
   .team__content-description {
     font-family: 'Droid Serif', sans-serif;
     font-size: 0.8rem; }
+    .team__content-description p {
+      font-family: 'Roboto Slab', serif;
+      color: #777; }
   .team__content-header {
     margin-top: 10px;
     color: #333;
