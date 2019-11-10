@@ -1,4 +1,4 @@
-![cover](https://raw.githubusercontent.com/kasiaizak/bootstrap-project/master/github/screenshot.png)
+![cover](https://raw.githubusercontent.com/kasiaizak/bootstrap-project/master/github/screenshot.jpg)
 
 # Bootstrap Project
 
