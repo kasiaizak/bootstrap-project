@@ -3,15 +3,17 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* start general */
-body,
-#team .item__description p {
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
   font-family: 'Roboto Slab', serif;
   color: #777;
 }
-
 
 .bootstrap-project .navbar {
   &-brand, &-brand:focus, &-brand:hover, &-toggler {
@@ -35,7 +37,6 @@ body,
   }
 }
 
-
 .header {
   background-image: url(../assets/img/header/grey.png), url(../assets/img/header/pictures_on_the_wall.jpg);
   background-position: top center;
@@ -56,7 +57,6 @@ body,
     margin-top: 1.5rem;
   }
 }
-
 
 .services {
   @include spacing;
@@ -87,7 +87,6 @@ body,
     }
   }
 }
-
 
 .portfolio {
   background-color: #f7f7f7;
@@ -144,7 +143,6 @@ body,
   }
 }
 
-
 .team {
   @include spacing;
   &__title {
@@ -176,7 +174,13 @@ body,
       &--2 { background-image: url("../assets/img/team/man-2.jpg"); }
       &--3 { background-image: url("../assets/img/team/woman-1.jpg"); }
     }
-    &-description { @include item-description }
+    &-description {
+      @include item-description;
+      p {
+        font-family: 'Roboto Slab', serif;
+        color: #777;
+      }
+    }
     &-header {
       margin-top: 10px;
       @include item-header;
@@ -203,7 +207,6 @@ body,
     }
   }
 }
-
 
 .contact {
   background-image: url("../assets/img/contact/world-map.jpg");
